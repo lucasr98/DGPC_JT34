@@ -30,7 +30,7 @@ body{
 	background-color: var(--color__b1);
 	display: flex;
 	flex-direction: column;
-	
+	min-height: 100vh;
 }
 
 h1{
@@ -128,17 +128,17 @@ article{
 }
 
 #datosAlumno{
-	background-image: url(../imagenes/perfil.png);
+	background-image: url(../imagenes/perfil.jpg);
 	background-position: center top;
 	background-size: cover;
 	justify-content: flex-end;
-	min-height: 100vh;
+	height: 100vh;
 }
 
 .background{
-	background: linear-gradient(transparent, var(--color__b1));
+	background: linear-gradient(to top, var(--color__b1), transparent);
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
@@ -200,7 +200,11 @@ article{
 }
 
 footer{
-	padding: 1.5rem 4rem;
+	background-color: var(--color__b2);
+	width: 100%;
+	height: 100%;
+	padding: 1.5rem 1rem;
+	font-size: .5rem;
 }
 
 @media only screen and (min-width: 700px){
