@@ -1,156 +1,131 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>UBA FADU DGPC Diaz Cortez - ver diazcortez.com.ar</title>
-    <link rel="icon" type="image/svg+xml" href="imagenes/icono-dgpc.svg" sizes="any" />
+
+    <link rel="icon" type="image/svg+xml" href="imagenes/icono-dgpc.png" sizes="any" />
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <header>
-        <a href="http://www.diazcortez.com.ar">
+        <a class="logo-container" href="http://www.diazcortez.com.ar" target="_blank">
             <img src="imagenes/logo-dgpc.svg" alt="Isologotipo de la Cátedra Díaz Cortez, muestra la sigla DGPC" />
         </a>
+        <div class="divisor"></div>
         <nav class="menu">
             <ul>
-                <li><a href="../index.html">Equipo JT46</a></li>
-                <li><a href="../1/index.html">Alumno Uno</a></li>
-                <li><a href="../2/index.html">Alumno Dos</a></li>
-                <li><a href="../3/index.html">Alumno Tres</a></li>
-                <li><a href="http://www.diazcortez.com.ar">DGPC</a></li>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="academico.html" target="_blank">Académico</a></li>
+                <li><a href="portafolio.html" target="_blank">Portafolio</a></li>
+                <li><a href="../index.html" target="_blank">Equipo-JT34</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <article id="datosAlumno" class="alumno">
-            <h1>Wang González</h1>
-            <div>
-                <img src="imagenes/uno.jpg" alt="retrato de Martín">
+        <article id="datosCarrera" class="carrera articulo">
+            <div class="h2-divisor">
+                <h2>CARRERA DE DG</h2>
             </div>
-            <div class="acercademi">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam dicta tempora consequuntur enim,
-                culpa quidem, laudantium repudiandae mollitia deserunt cum, nisi ea vero? Similique, omnis!
+            <section class="porcentaje borde-izquierdo_celeste borde-derecho_celeste">
+                <span class="porcentaje-p">55%</span>
+                <p>de la Carrera Aprobada</p>
+            </section>
+            <div class="lista-carrera">
+                <section class="materiasAprobadas section-background section-background_padding">
+                    <h3>Materias de Nivel 1</h3>
+                    <ul>
+                        <li><p>Tecnología 1</p><p class="derecha texto_celeste">8</p></li>
+                        <li><p>Comunicación 1</p><p class="derecha texto_celeste">5</p></li>
+                        <li><p>Morfología 1</p><p class="derecha texto_celeste">6</p></li>
+                        <li><p>Tipografía 1</p><p class="derecha texto_celeste">7</p></li>
+                        <li><p>Diseño Gráfico 1</p><p class="derecha texto_celeste">4</p></li>
+                        <li><p>Fotografía</p><p class="derecha texto_celeste">8</p></li>
+                        <li><p>Historia 1</p><p class="derecha texto_celeste">8</p></li>
+                    </ul>
+                </section>
+                <section class="materiasAprobadas section-background section-background_padding">
+                    <h3>Materias de Nivel 2</h3>
+                    <ul>
+                        <li><p>Diseño Gráfico 2</p><p class="derecha texto_celeste">6</p></li>
+                        <li><p>Comunicación 2</p><p class="derecha texto_celeste">7</p></li>
+                        <li><p>Tecnología 2</p><p class="derecha texto_celeste">9</p></li>
+                        <li><p>ME 1</p><p class="derecha texto_celeste">9</p></li>
+                    </ul>
+                </section>
             </div>
         </article>
-        <article id="datosCarrera" class="carrera">
-            <h2>Carrera Diseño Gráfico</h2>
-            <section class="porcentaje">
-                <p>65 % de la Carrera Aprobada</p>
-            </section>
-            <section class="materiasAprobadas">
-                <h2>Materias Aprobadas Nivel 1</h2>
-                <ul>
-                    <li>Materia 1</li>
-                    <li>Materia 2</li>
-                    <li>Materia 3</li>
-                    <li>Materia 4</li>
-                    <li>Materia 5</li>
-                    <li>Materia 6</li>
-                    <li>Materia 7</li>
-                </ul>
-            </section>
-            <section class="materiasAprobadas">
-                <h2>Materias Aprobadas Nivel 2</h2>
-                <ul>
-                    <li>Materia 8</li>
-                    <li>Materia 9</li>
-                    <li>Materia 10</li>
-                    <li>Materia 11</li>
-                    <li>Materia 12</li>
-                    <li>Materia 13</li>
-                    <li>Materia 14</li>
-                </ul>
-            </section>
-        </article>
-        <article id="datosEquipo" class="equipo">
-            <h2>Equipo JT50</h2>
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="imagenes/tres.jpg" alt="foto de uno" />
-                        <p>Leia Da Silva</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="imagenes/dos.jpg" alt="foto de dos" />
-                        <p>Ayelen Quispe</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="imagenes/uno.jpg" alt="foto de tres" />
-                        <p>Wang González</p>
-                    </a>
-                </li>
-            </ul>
-        </article>
-        <article id="datosComitente" class="comitente">
-            <h2>Comitente: ACUMAR</h2>
-            <section class="ACUMAR">
-                <h4>Práctico Integrador: <span>Mi Sitio en ACUMAR</span></h4>
-                <div>
-                    <img src="imagenes/logo-acumar.svg" />
-                </div>
-                <p>
-                    La Autoridad de Cuenca Matanza Riachuelo (ACUMAR) es el organismo público creado en noviembre de 006
-                    mediante la Ley 26.168, como consecuencia de la demanda cursada ante la Corte Suprema de Justicia de
-                    la Nación -conocida como Causa Mendoza para el saneamiento y recomposición del ambiente de la Cuenca
-                    Matanza Riachuelo.<br />
-                    Es un ente autónomo, autárquico e interjurisdiccional, y es tripartito porque conjuga el trabajo con
-                    los tres gobiernos que tienen competencia en el territorio: Nación, Provincia y Ciudad.
-                </p>
-            </section>
-        </article>
-        <article id="datosAcademicos" class="academicos">
-            <h2>Datos Académicos</h2>
-            <section id="datosUBA">
-                <div>
-                    <img src="imagenes/logo-uba.svg" alt="Logo de la UBA" />
-                </div>
-                <h4>UBA Universidad de Buenos Aires</h4>
-                <ul>
-                    <li>
-                        <h5>Rector: <span>DR Ricardo Gelpi</span></h5>
-                    </li>
-                    <li>
-                        <h5>Vicerrector: <span>DR Emiliano Yacobitti</span></h5>
-                    </li>
-                </ul>
-            </section>
-            <section id="datosFADU">
-                <div>
-                    <img src="imagenes/logofadu.svg" alt="Logo de la FADU" />
-                </div>
-                <h4>FADU Facultad de Arquitectura Diseño y Urbanismo</h4>
-                <ul>
-                    <li>
-                        <h5>Decano: <span>DG Carlos Venancio</span></h5>
-                    </li>
-                </ul>
-            </section>
-            <section id="datosDGPC">
-                <div>
-                    <img src="imagenes/logo-dgpc.svg" alt="Logo de DGPC" />
-                </div>
-                <h4>DGPC Diseño Gráfico por Computación</span></h4>
-                <ul>
-                    <li>
-                        <h5>Cátedrta: <span>DG Díaz Cortez</span></h5>
-                    </li>
-                    <li>
-                        <h5>Comisión: <span>Rita Rodríguez Álvarez y Milagros Pierini</span></h5>
-                    </li>
-                    <li>
-                        <h5>Año: <span>2022</span></h5>
-                    </li>
-                    <li>
-                        <h5>Cuatrimestre: <span>Segundo</span></h5>
-                    </li>
-                </ul>
-            </section>
+        <article id="datosAcademicos" class="academicos articulo">
+            <div class="h2-divisor">
+                <h2>Datos Académicos</h2>
+            </div>
+            <div class="lista-academica">
+                <section id="datosUBA" class="section-background section-background_padding">
+                    <div class="logos-container">
+                        <img id="logoUba" src="imagenes/logo-uba.svg" alt="Logo de la UBA" />
+                    </div>
+                    <div>
+                        <h4>UBA Universidad de Buenos Aires</h4>
+                        <ul>
+                            <li>
+                                <h5>Rector: <span class="texto_celeste texto_italica-fino">DR Ricardo Gelpi</span></h5>
+                            </li>
+                            <li>
+                                <h5>Vicerrector: <span class="texto_celeste texto_italica-fino">DR Emiliano Yacobitti</span></h5>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="datosFADU" class="section-background section-background_padding">
+                    <div class="logos-container">
+                        <img id="logoFadu" src="imagenes/logofadu.svg" alt="Logo de la FADU" />
+                    </div>
+                    <div>
+                        <h4>FADU Facultad de Arquitectura Diseño y Urbanismo</h4>
+                        <ul>
+                            <li>
+                                <h5>Decano: <span class="texto_celeste texto_italica-fino">DG Carlos Venancio</span></h5>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="datosDGPC" class="section-background section-background_padding">
+                    <div class="logos-container">
+                        <img id="logoDgpc" src="imagenes/logo-dgpc.svg" alt="Logo de DGPC" />
+                    </div>
+                    <div>
+                        <h4>DGPC Diseño Gráfico por Computación</span></h4>
+                        <ul>
+                            <li>
+                                <h5>Cátedrta: <span class="texto_celeste texto_italica-fino">DG Díaz Cortez</span></h5>
+                            </li>
+                            <li>
+                                <h5>Comisión: <span class="texto_celeste texto_italica-fino">Alicia Zelada</span></h5>
+                            </li>
+                            <li>
+                                <h5>Año: <span class="texto_celeste texto_italica-fino">2022</span></h5>
+                            </li>
+                            <li>
+                                <h5>Cuatrimestre: <span class="texto_celeste texto_italica-fino">Segundo</span></h5>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
         </article>
     </main>
     <footer>

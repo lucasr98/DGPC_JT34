@@ -6,6 +6,7 @@
 	user-select: none;
 	list-style: none;
 	color: var(--color__a1);
+	transition: all, .3s ease-in-out;
 }
 
 :root{
@@ -47,17 +48,58 @@ h2{
 	font-family: var(--tipo__h);
 	font-size: 1.25rem;
 	font-weight: normal;
-	padding: 1rem 2rem 1rem 2rem;
-	border-bottom-right-radius: 2rem;
+	padding: 1rem 2rem 1rem 1rem;
+	border-top-right-radius: 2rem;
 	background-color: var(--color__b1);
 	display: inline;
 	margin-left: -1rem;
 }
 
+h3{
+	font-family: var(--tipo__h);
+	font-size: 1rem;
+	font-weight: 700;
+	border-bottom: .1em solid var(--color__a1);
+	padding-bottom: .25em;
+}
+
 .h2-divisor{
-	background-color: rgba(255, 255, 255, .05);
+	margin-top: 2rem;
+	background-color: var(--color__b2);
 	width: 100%;
 	right: 0;
+}
+
+.section-background{
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color__b3);
+	border-radius: 1rem;
+}
+
+.section-background_padding{
+	gap: 2rem;
+	padding: 2rem;
+	border-radius: 1rem;
+}
+
+.borde-izquierdo_celeste{
+	border-left: .15rem solid var(--color__c2);
+	padding-left: 0.5rem;
+}
+
+.borde-derecho_celeste{
+	border-right: .15rem solid var(--color__c2);
+	padding-right: 0.5rem;
+}
+
+.texto_celeste{
+	color: var(--color__c2);
+}
+
+.texto_italica-fino{
+	font-weight: 100;
+	font-style: italic;
 }
 
 a{
@@ -82,13 +124,13 @@ header{
 	z-index: 1000;
 	box-shadow: 0 0 1rem rgba(0, 0, 0, .75);
 	opacity: .75;
-	transition: all .3s ease-in-out;
 }
 
 .logo-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 4rem;
-	background-color: var(--color__a1);
-	transition: all .3s ease-in-out;
 }
 
 .logo-container:hover{
@@ -97,6 +139,7 @@ header{
 }
 
 .logo-container img{
+	background-color: var(--color__a1);
 	width: 100%;
 }
 
@@ -126,7 +169,6 @@ header:hover > .menu{
 .menu{
 	display: none;
 	transform: scale(1, 0);
-	transition: transform, .3s ease-in-out;
 }
 
 .menu ul{
@@ -141,16 +183,23 @@ header:hover > .menu{
 
 .menu ul li a{
 	color: var(--color__a1);
-	transition: all .3s ease-in-out;
 }
 
-article{
+.articulo{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
 	width: 100%;
 	padding: 4rem 1rem;
-	gap: 2rem;
+	gap: 5rem;
 }
 
 #datosAlumno{
+	width: 100%;
+	padding: 4rem 1rem;
+	gap: 5rem;
+	min-height: 100vh;
 	background-image: url(../imagenes/perfil.jpg);
 	background-position: center top;
 	background-size: cover;
@@ -158,7 +207,6 @@ article{
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-end;
-	min-height: 100vh;
 }
 
 .background{
@@ -175,8 +223,6 @@ article{
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
-	border-left: .15rem solid var(--color__c2);
-	padding-left: 0.5rem;
 	z-index: 900;
 	font-weight: 100;
 	height: 6rem;
@@ -187,29 +233,16 @@ article{
     display: none;
 }
 
-#datosEquipo{
-	gap: 5rem;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: space-evenly;
-}
-
 .lista-alumno{
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 	grid-auto-flow: dense;
 	width: 100%;
 	gap: 2rem;
 }
 
 .lista-alumno li a{
-	display: flex;
-	flex-direction: column;
 	align-items: center;
-	background-color: var(--color__b3);
-	border-radius: 1rem;
-	transition: all .3s ease-in-out;
 }
 
 .lista-alumno li a:hover{
@@ -227,7 +260,6 @@ article{
 	border-top-right-radius: 1rem;
 	border-top-left-radius: 1rem;
 	filter: saturate(25%) brightness(.75);
-	transition: all .3s ease-in-out;
 }
 
 .lista-alumno li a:hover > .avatar img{
@@ -247,18 +279,7 @@ article{
 	font-style: italic;
 }
 
-#datosComitente{
-	gap: 5rem;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: space-evenly;
-	min-height: 100vh;
-}
-
 .ACUMAR{
-	border-left: .15rem solid var(--color__c2);
-	padding-left: .5rem;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
@@ -272,6 +293,112 @@ article{
 	width: 100%;
 }
 
+.porcentaje{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.porcentaje-p{
+	font-size: 5rem;
+	font-family: var(--tipo__h);
+	color: var(--color__c2);
+}
+
+.lista-carrera{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+
+.materiasAprobadas{
+	width: 100%;
+	gap: 2rem;
+	padding: 2rem;
+	border-radius: 1rem;
+	justify-content: center;
+	background-color: var(--color__b3);
+}
+
+.materiasAprobadas ul{
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+}
+
+.materiasAprobadas ul li{
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+	padding-bottom: 0.25em;
+	border-bottom: .1em solid transparent;
+	cursor: pointer;
+}
+
+.lista-carrera ul li:hover{
+	border-bottom: .1em solid var(--color__c2);
+}
+
+.lista-academica{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+	grid-auto-flow: dense;
+	width: 100%;
+	gap: 2rem;
+}
+
+.lista-academica section{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.lista-academica section div:first-child{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 75%;
+}
+
+.lista-academica section div img{
+	width: 50%;
+	height: auto;
+	object-fit: cover;
+}
+
+.lista-academica section div:nth-child(2n){
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 1rem;
+}
+
+.lista-academica section div ul{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: .25rem;
+}
+
+#logoUba{
+	background-color: var(--color__a1);
+	border-radius: 100%;
+}
+
+#logoFadu{
+}
+
+#logoDgpc{
+	background-color: var(--color__a1);
+}
+
 footer{
 	background-color: var(--color__b2);
 	width: 100%;
@@ -283,6 +410,14 @@ footer{
 
 footer p{
 	color: var(--color__a3);
+}
+
+@media only screen and (min-width: 650px){
+
+	.lista-academica{
+		grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+	}
+
 }
 
 @media only screen and (min-width: 680px){
@@ -318,14 +453,22 @@ footer p{
 		flex-direction: row;
 	}
 
+	.h2-divisor{
+		margin-top: 4rem;
+	}
+
 }
 
-@media only screen and (min-width: 1290px){
+@media only screen and (min-width: 1280px){
 
 	:root{
 
 		font-size: 120%;
 
+	}
+
+	.borde-izquierdo_celeste{
+		padding-left: 1.5rem;
 	}
 
 	header{
@@ -336,7 +479,7 @@ footer p{
 		padding: 1rem 4rem;
 	}
 
-	article{
+	.articulo{
 		padding: 4rem 3rem;
 	}
 
@@ -347,7 +490,7 @@ footer p{
 	h2{
 		font-size: 2rem;
 		margin-left: -3rem;
-		border-bottom-right-radius: 3rem;
+		border-top-right-radius: 3rem;
 		padding-right: 4rem;
 	}
 
@@ -366,17 +509,14 @@ footer p{
 		color: var(--color__b2);
 	}
 
-	.acercademi{
-		padding-left: 1.5rem;
-	}
-
 	.lista-alumno{
+		grid-template-columns: repeat(3, 1fr);
 		padding-left: 1.5rem;
 		border-left: .15rem solid var(--color__c2);
 	}
 
-	.ACUMAR{
-		padding-left: 1.5rem;
+	.lista-academica{
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 }
