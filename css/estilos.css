@@ -220,7 +220,7 @@ header:hover > .menu{
 .background{
 	background: linear-gradient(to top, rgba(0, 0, 0, 1.0), transparent);
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	left: 0;
 	width: 100%;
 	min-height: 100%;
