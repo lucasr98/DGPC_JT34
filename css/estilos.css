@@ -18,11 +18,11 @@
 	--color__b2: #222;
 	--color__b3: #444;
 
-	--color__c2: #47F16D;
+	--color__c2: #58FFAD;
 
 	--tipo__h: 'Poppins', sans-serif;
 
-	font-size: 100%;
+	font-size: 80%;
 
 }
 
@@ -39,28 +39,35 @@ body{
 
 h1{
 	font-family: var(--tipo__h);
-	font-size: 1.5rem;
+	font-size: 2rem;
 	font-weight: 700;
 	z-index: 900;
 }
 
 h2{
 	font-family: var(--tipo__h);
-	font-size: 1.25rem;
-	font-weight: normal;
-	padding: 1rem 2rem 1rem 1rem;
+	color: var(--color__c2);
+	font-size: 1.5rem;
+	font-weight: 700;
+	padding: 1rem 2rem 1rem 0;
 	border-top-right-radius: 2rem;
 	background-color: var(--color__b1);
 	display: inline;
-	margin-left: -1rem;
+	animation: titulo 2s ease-out alternate infinite;
 }
 
 h3{
 	font-family: var(--tipo__h);
-	font-size: 1rem;
+	font-size: 1.25rem;
 	font-weight: 700;
 	border-bottom: .1em solid var(--color__a1);
 	padding-bottom: .25em;
+}
+
+h4{
+	font-family: var(--tipo__h);
+	font-size: 1.2rem;
+	font-weight: normal;
 }
 
 .h2-divisor{
@@ -131,11 +138,13 @@ header{
 	justify-content: center;
 	align-items: center;
 	width: 4rem;
+	animation: logo 1s ease-in alternate infinite;
 }
 
 .logo-container:hover{
 	transform: scale(1.2);
 	box-shadow: 0 0 .5rem var(--color__c2);
+	animation-duration: 0s;
 }
 
 .logo-container img{
@@ -198,8 +207,8 @@ header:hover > .menu{
 	width: 100%;
 	padding: 4rem 1rem;
 	gap: 5rem;
-	min-height: 100vh;
-	background-image: url(../imagenes/perfil.jpg);
+	height: 100vh;
+	background-image: url(../imagenes/perfil-2.jpg);
 	background-position: center top;
 	background-size: cover;
 	display: flex;
@@ -209,7 +218,7 @@ header:hover > .menu{
 }
 
 .background{
-	background: linear-gradient(to top, var(--color__b1), transparent);
+	background: linear-gradient(to top, rgba(0, 0, 0, 1.0), transparent);
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -237,8 +246,7 @@ header:hover > .menu{
 	grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 	grid-auto-flow: dense;
 	width: 100%;
-	row-gap: 2rem;
-	column-gap: 1rem;
+	gap: 1rem;
 }
 
 .lista-alumno li a{
@@ -280,17 +288,33 @@ header:hover > .menu{
 }
 
 .ACUMAR{
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+	grid-auto-flow: dense;
+	width: 100%;
 	gap: 2rem;
 }
 
 .logo-acumar{
-	width: 50%;
+	width: 100%;
+	height: auto;
+	background-color: var(--color__a1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4rem;
 }
 
 .logo-acumar img{
 	width: 100%;
+	filter: brightness(0);
+}
+
+.comitente-parrafo{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1rem;
 }
 
 .porcentaje{
@@ -399,17 +423,26 @@ header:hover > .menu{
 	background-color: var(--color__a1);
 }
 
-.lista-trabajos{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-	grid-auto-flow: dense;
-	width: 100%;
-	gap: 2rem;
+#portfolio{
+	min-height: 100vh;
 }
 
-#portfolio div:first-child{
+.lista-trabajos{
+	columns: 3 200px;
+	gap: 1rem;
+	break-inside: avoid;
+}
+
+.lista-trabajos li{
+	margin-bottom: 1rem;
+}
+
+.lista-trabajos li:hover{
+	transform: scale(1.02);
+}
+
+#portfolio ul li a div:first-child{
 	min-width: 100%;
-	height: 100%;
 }
 
 #portfolio div img{
@@ -419,7 +452,7 @@ header:hover > .menu{
 	object-fit: cover;
 }
 
-#portfolio div:nth-child(2n){
+#portfolio ul li a div:nth-child(2n){
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -449,12 +482,30 @@ footer p{
 		grid-template-columns: repeat(3, 1fr);
 	}
 
+	/*
 	.lista-trabajos{
 		grid-template-columns: repeat(3, 1fr);
 	}
+	*/
 
 	.lista-alumno li a div p{
 		font-size: .6rem;
+	}
+
+	.ACUMAR{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+
+	.logo-acumar{
+		width: 100%;
+		height: auto;
+		background-color: var(--color__a1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 4rem;
 	}
 
 }
@@ -494,7 +545,7 @@ footer p{
 
 	:root{
 
-		font-size: 120%;
+		font-size: 100%;
 
 	}
 
@@ -510,6 +561,10 @@ footer p{
 		padding: 1rem 4rem;
 	}
 
+	#datosAlumno{
+		padding: 4rem 3rem;
+	}
+
 	.articulo{
 		padding: 4rem 3rem;
 	}
@@ -520,7 +575,6 @@ footer p{
 
 	h2{
 		font-size: 2rem;
-		margin-left: -3rem;
 		border-top-right-radius: 3rem;
 		padding-right: 4rem;
 	}
@@ -550,3 +604,23 @@ footer p{
 	}
 
 }
+
+@keyframes logo{
+	0%{
+		transform: scale(1.0);
+	}
+	100%{
+		transform: scale(1.2);
+	}
+}
+
+/*
+@keyframes titulo{
+	0%{
+		text-shadow: 0 0 .05rem #fff;
+	}
+	100%{
+		text-shadow: 0 0 1rem var(--color__c2);
+	}
+}
+*/
